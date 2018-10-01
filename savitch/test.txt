@@ -1,0 +1,34 @@
+C:\Users\brandon.artner\AppData\Local\Programs\Python\Python35-32\python.exe "C:/Users/brandon.artner/Google Drive/AlgorithmsGroupWork/HW4/savitch2.py"
+Grid Size: 2
+ *  -  *  -  *  -  * 
+ |     |     |     | 
+ *  -  *  -  *  -  * 
+ |     |     |     | 
+ *  -  *  -  *  -  * 
+ |     |     |     | 
+ *  -  *  -  *  -  * 
+R(1,16,4)
+------------
+R(1,1,3)
+R(1,16,4)
+------------
+R(1,1,2)
+R(1,1,3)
+R(1,16,4)
+------------
+R(1,1,1)
+R(1,1,2)
+R(1,1,3)
+R(1,16,4)
+------------
+R(1,1,0)
+R(1,1,1)
+R(1,1,2)
+R(1,1,3)
+R(1,16,4)
+------------
+
+...
+
+------------
+True
