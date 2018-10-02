@@ -7,7 +7,7 @@ Algorithms:
 1. Brute-Force Deciphering
 2. Greedy Job Scheduling
 3. Savitch's Graph Node Reachability 
-4. Minimum Cost Spanning Tree
+4. Kruskal's Minimum Cost Spanning Tree
 5. PageRank
 6. Extended Euclidean Factorization
 

@@ -5,7 +5,23 @@ import re
 import sys
 import math
 
-SYSTEM_STACK = ['------------']
+
+class SystemStack(object):
+
+    def __init__(self):
+        self.stack = ['------------']
+
+    def pop(self):
+        self.stack.pop()
+
+    def push(self, elem):
+        self.stack.append(elem)
+
+    def display(self):
+        for x in reversed(self.stack):
+            print(x)
+
+SYSTEM_STACK = SystemStack()
 
 
 class Grid(object):
@@ -47,18 +63,17 @@ class Grid(object):
             print()
 
     def savitch(self, u, v, i):
-        SYSTEM_STACK.append('R({},{},{})'.format(u, v, i))
-        for x in reversed(SYSTEM_STACK):
-            print(x)
+        SYSTEM_STACK.push('R({},{},{})'.format(u,v,i))
+        SYSTEM_STACK.display()
 
         if i == 0:
             if u == v:
                 SYSTEM_STACK.pop()
-                SYSTEM_STACK.append('T')
+                SYSTEM_STACK.push('T')
                 return True
             elif (u, v) in self.edges:
                 SYSTEM_STACK.pop()
-                SYSTEM_STACK.append('T')
+                SYSTEM_STACK.push('T')
                 return True
         else:
             for w in self.vertices:
@@ -66,8 +81,7 @@ class Grid(object):
                     SYSTEM_STACK.pop()
                     SYSTEM_STACK.pop()
                     SYSTEM_STACK.pop()
-                    SYSTEM_STACK.append('T')
-                    #print('T')
+                    SYSTEM_STACK.push('T')
                     return True
         SYSTEM_STACK.pop()
         return False
@@ -80,5 +94,3 @@ if __name__ == "__main__":
         grid = Grid(int(input("Grid Size: ")))
     grid.display()
     print(grid.savitch(1, grid.size**2, grid.size))
-    for x in reversed(SYSTEM_STACK):
-        print(x)
