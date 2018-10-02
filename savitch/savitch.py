@@ -64,7 +64,6 @@ class Grid(object):
 
     def savitch(self, u, v, i):
         SYSTEM_STACK.push('R({},{},{})'.format(u,v,i))
-        SYSTEM_STACK.display()
 
         if i == 0:
             if u == v:
@@ -94,3 +93,4 @@ if __name__ == "__main__":
         grid = Grid(int(input("Grid Size: ")))
     grid.display()
     print(grid.savitch(1, grid.size**2, grid.size))
+    SYSTEM_STACK.display()
